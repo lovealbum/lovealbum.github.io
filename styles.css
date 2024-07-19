@@ -90,6 +90,64 @@ button#next {
     transform: scale(1);
 }
 
+/* Стили для кнопок навигации */
+.pagination {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    transition: background-color 0.3s, transform 0.3s;
+    display: none; /* Кнопки скрыты по умолчанию */
+}
+
+.pagination button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Адаптивные стили для кнопок навигации */
+@media (max-width: 768px) {
+    .pagination {
+        bottom: 10px;
+        gap: 5px;
+    }
+
+    .pagination button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        flex-direction: column;
+        bottom: 10px;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .pagination button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
 /* Медиа-запросы для телефонов */
 @media (max-width: 768px) {
     .album {

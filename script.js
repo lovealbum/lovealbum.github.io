@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const buttons = document.querySelectorAll('.pagination button');
         buttons.forEach(button => button.style.display = 'none'); // Скрываем все кнопки
 
-        const pagesToShow = [1, 2, 3, 10, 20, 30, 44]; // Базовые кнопки
+        const pagesToShow = [1, 2, 3, 10, 20, 30, 44, 49]; // Базовые кнопки, добавлена 45-я страница
 
         // Определение диапазона для отображения
         const startPage = Math.max(1, index - 2);
@@ -94,6 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
             showPage(currentPage);
         }
     });
+
+    // Обработчик для кнопки перехода на 45-ю страницу
+    const buttonGoToPage49 = document.getElementById('go-to-page-49');
+    if (buttonGoToPage49) {
+        buttonGoToPage49.addEventListener('click', () => {
+            currentPage = 49; 
+            showPage(currentPage);
+        });
+    }
 
     // Показ первой страницы
     showPage(currentPage);
