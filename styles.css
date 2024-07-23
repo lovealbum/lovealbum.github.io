@@ -121,6 +121,51 @@ button#next {
     opacity: 0.5;
 }
 
+        .breast {
+    width: 222px;
+    margin: 200px auto 0;
+}
+
+.breast .left { float: left; }
+.breast .right { float: right; }
+
+.breast .boob {
+    border: 1px solid black;
+    border-top: none;
+    width: 100px;
+    height: 56px;
+    padding: 0;
+    margin: 0;
+}
+
+.breast .boob .nipple {
+    margin: 0 auto;
+    padding: 18px 0 0;
+    font-size: 40px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    list-style-position: inside;
+    color: #ff9999;
+    content: '\A0'; /* Для Opera, которая не хотела показывать пустой LI */
+}
+.breast .boob {
+    -moz-border-radius: 0 0 60px 60px;
+    -webkit-border-bottom-right-radius: 60px; /* Safari почему-то не принял -webkit-border-radius: 0 0 60px 60px */
+    -webkit-border-bottom-left-radius: 60px; /* пришлось делить на части */
+    border-radius: 0 0 60px 60px;
+    
+    -moz-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+}
+
+.breast .right .boob {
+    -moz-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+}
+
 /* Адаптивные стили для кнопок навигации */
 @media (max-width: 768px) {
     .pagination {
